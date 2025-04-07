@@ -19,6 +19,9 @@ let currentTarget = null;          // NEW global to store current animation targ
 let pathTrace = [];                // NEW: store travelled path as array of {x, y}
 let score = 0;                     // NEW: cumulative score
 
+// NEW: Add global variables for touchstart coordinates
+let touchStartX = 0, touchStartY = 0;
+
 // NEW: Define level configurations and extra level counter for custom increases at highest level
 const levels = [
   { value: 'easy',     cols: 15, rows: 11 },
@@ -324,6 +327,13 @@ document.addEventListener('keydown', e => {
       }, 100);
     }
   });
+});
+
+document.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }
 });
 
 document.addEventListener('touchend', e => {
