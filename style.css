@@ -1,0 +1,91 @@
+/* RESET & LAYOUT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+body.theme-light {
+  background: #fdfdfd;
+  color: #333;
+}
+#ui {
+  text-align: center;
+  /* margin: 10px auto 20px auto; */
+  z-index: 2;
+}
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+#controls,
+#stats {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+select,
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #4caf50;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+select {
+  background: #2196f3;
+}
+button:hover,
+select:hover {
+  opacity: 0.9;
+}
+#stats.hidden {
+  display: none;
+}
+
+/* Initial big controls for easy starting */
+.initial-ui h1 {
+  font-size: 1.8rem;
+}
+.initial-ui select,
+.initial-ui button {
+  font-size: 1rem;
+  padding: 6px 12px;
+}
+
+/* CANVAS CONTAINER */
+#canvas-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mazeCanvas {
+  max-width: 95vw;
+  max-height: 80vh;
+  border: 4px solid #4caf50;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* STATS */
+#stats div {
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin: 4px;
+}
+

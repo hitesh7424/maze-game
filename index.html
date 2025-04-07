@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Colorful Maze Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-light">
+  <div id="ui" class="initial-ui">
+    <h1>🎉 Maze Adventure</h1>
+    <div id="controls">
+      <label for="level">Level:</label>
+      <select id="level">
+        <option value="easy">Easy (15×11)</option>
+        <option value="medium" selected>Medium (25×17)</option>
+        <option value="hard">Hard (35×23)</option>
+        <option value="insane">Insane (45×29)</option>
+        <option value="nightmare">Nightmare (55×37)</option>
+      </select>
+      <button id="btn-start">Start</button>
+    </div>
+    <div id="stats" class="hidden">
+      <div>Score: <span id="score">0</span></div>
+      <div>Moves: <span id="moves">0</span></div>
+      <div>Time: <span id="timer">0</span>s</div>
+      <button id="btn-reset">🔄 Reset</button>
+    </div>
+  </div>
+  <div id="canvas-container">
+    <canvas id="mazeCanvas"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
